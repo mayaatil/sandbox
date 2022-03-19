@@ -1,0 +1,21 @@
+<form class='form new-project-form'>
+  {{#each ingredient as |ingredient|}}
+    <div class='row mb-4 project'>
+
+      <div>
+        <input
+          type='checkbox'
+          value='{{ingredient.id}}'
+          name='{{ingredient.name}}'
+        />
+        {{ingredient.name}}</div>
+      {{#each ingredient.recipes as |recipe|}}
+        {{recipe.name}}
+      {{/each}}
+    </div>
+  {{/each}}
+  <div class='form-group'>
+    <button type='submit' class='btn btn-primary'>Create</button>
+  </div>
+</form>
+<script src='./js/homepage.js'></script>
